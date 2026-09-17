@@ -1,6 +1,6 @@
 # STVE - Sensor Trust Verification Engine
 
-**Sensor Trust Verification Engine for Precision Agriculture**
+**A confidence-scoring trust layer for IoT soil-sensor networks in precision agriculture — detects silent sensor failures before they corrupt automated irrigation decisions.**
 
 ## Quick Links
 
