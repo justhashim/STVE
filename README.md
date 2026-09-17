@@ -27,12 +27,12 @@ The fundamental challenge is that **automation systems trust all sensor data equ
 
 ## Solution Overview
 
-**Probos** introduces a **Trust Layer** between raw sensor data and decision-making systems. Rather than blindly trusting all sensors, Probos continuously validates sensor behavior and assigns a dynamic **Trust Score** to each device.
+**STVE** introduces a **Trust Layer** between raw sensor data and decision-making systems. Rather than blindly trusting all sensors, STVE continuously validates sensor behavior and assigns a dynamic **Trust Score** to each device.
 
 ### Key Innovation
 
-Probos acts as a **reliability firewall**:
-1. Sensors send readings → Probos ingests and analyzes them
+STVE acts as a **reliability firewall**:
+1. Sensors send readings → STVE ingests and analyzes them
 2. Trust Engine evaluates each sensor's behavior using statistical methods
 3. Faulty sensors are flagged and isolated **before** they influence decisions
 4. Maintenance tickets are automatically generated for anomalous sensors
@@ -76,7 +76,7 @@ This approach prevents faulty sensors from corrupting irrigation decisions, redu
 
 **Purpose**: Core intelligence that evaluates sensor reliability.
 
-**What it does (v2)**: Probos uses a diagnostic, confidence-based approach instead of a fixed pass/fail rule set.
+**What it does (v2)**: STVE uses a diagnostic, confidence-based approach instead of a fixed pass/fail rule set.
 
 **Key features**:
 - Computes **parameter-level trust** (moisture / temperature / EC / pH) to isolate which probe is faulty
@@ -264,7 +264,7 @@ If you want the fastest path to a working demo, follow `QUICK_START.md`.
 3. **Configure database**:
    - Create `backend/.env` and set:
      ```
-     DATABASE_URL="postgresql://username:password@localhost:5432/probos"
+     DATABASE_URL="postgresql://username:password@localhost:5432/STVE"
      ```
 
 4. **Run migrations + generate Prisma client**:
@@ -381,7 +381,7 @@ NEXT_PUBLIC_API_URL=http://localhost:5000
 ## Project Structure
 
 ```
-Probos/
+STVE/
 │
 ├── backend/
 │   ├── src/
@@ -474,7 +474,7 @@ Probos/
 
 3. **Prevention > Reaction**: Catching faulty sensors early prevents cascading errors in automation systems.
 
-4. **Automation Needs Verification**: The shift from manual to automated agriculture demands robust data validation layers like Probos.
+4. **Automation Needs Verification**: The shift from manual to automated agriculture demands robust data validation layers like STVE.
 
 ---
 
@@ -496,4 +496,4 @@ For questions or collaboration opportunities, please open an issue in this repos
 
 ---
 
-**Probos**: Because in precision agriculture, data you can trust is the foundation of decisions that matter.
+**STVE**: Because in precision agriculture, data you can trust is the foundation of decisions that matter.
